@@ -14,7 +14,12 @@
 # the second puzzle is unlocked when you complete the first. Each puzzle grants one star. Good luck!
 
 require_relative 'day01'
+require_relative 'day02'
 
 puts 'Day 1'
 print '-- ', Captcha.solution_1, "\n"
 print '-- ', Captcha.solution_2, "\n"
+
+puts 'Day 2'
+print '-- ', Checksum.solution_1, "\n"
+print '-- ', Checksum.solution_2, "\n"
