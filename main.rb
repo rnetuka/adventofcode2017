@@ -15,6 +15,7 @@
 
 require_relative 'day01'
 require_relative 'day02'
+require_relative 'day03'
 
 puts 'Day 1'
 print '-- ', Captcha.solution_1, "\n"
@@ -23,3 +24,7 @@ print '-- ', Captcha.solution_2, "\n"
 puts 'Day 2'
 print '-- ', Checksum.solution_1, "\n"
 print '-- ', Checksum.solution_2, "\n"
+
+puts 'Day 3'
+print '-- ', SpiralMemory.solution_1, "\n"
+print '-- ', SpiralMemory.solution_2, "\n"
