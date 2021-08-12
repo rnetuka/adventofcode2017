@@ -18,23 +18,27 @@ require_relative 'day02'
 require_relative 'day03'
 require_relative 'day04'
 require_relative 'day05'
+require_relative 'day06'
 
-puts 'Day 1'
-print '-- ', Captcha.solution_1, "\n"
-print '-- ', Captcha.solution_2, "\n"
+#puts 'Day 1'
+#print '-- ', Captcha.solution_1, "\n"
+#print '-- ', Captcha.solution_2, "\n"
 
-puts 'Day 2'
-print '-- ', Checksum.solution_1, "\n"
-print '-- ', Checksum.solution_2, "\n"
+#puts 'Day 2'
+#print '-- ', Checksum.solution_1, "\n"
+#print '-- ', Checksum.solution_2, "\n"
 
-puts 'Day 3'
-print '-- ', SpiralMemory.solution_1, "\n"
-print '-- ', SpiralMemory.solution_2, "\n"
+#puts 'Day 3'
+#print '-- ', SpiralMemory.solution_1, "\n"
+#print '-- ', SpiralMemory.solution_2, "\n"
 
-puts 'Day 4'
-print '-- ', Passphrases.solution_1, "\n"
-print '-- ', Passphrases.solution_2, "\n"
+#puts 'Day 4'
+#print '-- ', Passphrases.solution_1, "\n"
+#print '-- ', Passphrases.solution_2, "\n"
 
-puts 'Day 5'
-puts "-- #{TwistyTrampolines.solution_1}"
-puts "-- #{TwistyTrampolines.solution_2}"
+#puts 'Day 5'
+#puts "-- #{TwistyTrampolines.solution_1}"
+#puts "-- #{TwistyTrampolines.solution_2}"
+
+puts 'Day 6'
+puts "-- #{MemoryReallocation.solution_1}"
