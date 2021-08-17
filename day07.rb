@@ -178,5 +178,5 @@ def solution_2
 end
 
 puts "Day 7"
-puts " - What is the name of the bottom program?: #{solution_1}"
-puts " - What would its weight need to be?:  #{solution_2}"
+puts " - What is the name of the bottom program? #{solution_1}"
+puts " - What would its weight need to be? #{solution_2}"

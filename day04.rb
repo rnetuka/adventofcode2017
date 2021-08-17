@@ -63,17 +63,16 @@ def read_passphrases
   File.open('input/day04.txt').readlines.map { |line| Passphrase.new(line) }
 end
 
-
-module Passphrases
-
-  def Passphrases.solution_1
-    read_passphrases.select { |passphrase| passphrase.valid? }.length
-  end
-
-  def Passphrases.solution_2
-    passphrases = read_passphrases
-    passphrases.each { |passphrase| passphrase.strict = true }
-    passphrases.select { |passphrase| passphrase.valid? }.length
-  end
-
+def solution_1
+  read_passphrases.select { |passphrase| passphrase.valid? }.length
 end
+
+def solution_2
+  passphrases = read_passphrases
+  passphrases.each { |passphrase| passphrase.strict = true }
+  passphrases.select { |passphrase| passphrase.valid? }.length
+end
+
+puts "Day 4"
+puts " - How many passphrases are valid? #{solution_1}"
+puts " - How many passphrases are valid? #{solution_2}"

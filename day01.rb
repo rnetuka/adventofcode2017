@@ -41,27 +41,27 @@ def read_input
   line.chars.map { |c| c.to_i }
 end
 
-module Captcha
-
-  def Captcha.solution(digits, step)
-    sum = 0
-    digits.each_index do |i|
-      j = (i + step) % digits.length
-      if digits[i] == digits[j]
-        sum += digits[i]
-      end
+def solution(digits, step)
+  sum = 0
+  digits.each_index do |i|
+    j = (i + step) % digits.length
+    if digits[i] == digits[j]
+      sum += digits[i]
     end
-    sum
   end
-
-  def Captcha.solution_1
-    digits = read_input
-    solution(digits, 1)
-  end
-
-  def Captcha.solution_2
-    digits = read_input
-    solution(digits, digits.length / 2)
-  end
-
+  sum
 end
+
+def solution_1
+  digits = read_input
+  solution(digits, 1)
+end
+
+def solution_2
+  digits = read_input
+  solution(digits, digits.length / 2)
+end
+
+puts "Day 1"
+puts " - What is the solution to your captcha? #{solution_1}"
+puts " - What is the solution to your new captcha? #{solution_2}"

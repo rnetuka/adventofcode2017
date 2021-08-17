@@ -114,5 +114,5 @@ def solution_2
 end
 
 puts "Day 6"
-puts "Solution 1: #{solution_1}"
-puts "Solution 2: #{solution_2}"
+puts "How many cycles must be completed? #{solution_1}"
+puts "How many cycles are in the infinite loop? #{solution_2}"

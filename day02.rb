@@ -1,4 +1,5 @@
 # --- Day 2: Corruption Checksum ---
+#
 # As you walk through the door, a glowing humanoid shape yells in your direction. "You there! Your state appears to be
 # idle. Come help us repair the corruption in this spreadsheet - if we take another millisecond, we'll have to display
 # an hourglass cursor!"
@@ -66,23 +67,23 @@ def find_division(numbers)
   end
 end
 
-module Checksum
-
-  def Checksum.solution_1
-    checksum = 0
-    read_spreadsheet.each do |numbers|
-      checksum += numbers.max - numbers.min
-    end
-    checksum
+def solution_1
+  checksum = 0
+  read_spreadsheet.each do |numbers|
+    checksum += numbers.max - numbers.min
   end
-
-  def Checksum.solution_2
-    checksum = 0
-    read_spreadsheet.each do |numbers|
-      n, m = find_division(numbers)
-      checksum += n / m
-    end
-    checksum
-  end
-
+  checksum
 end
+
+def solution_2
+  checksum = 0
+  read_spreadsheet.each do |numbers|
+    n, m = find_division(numbers)
+    checksum += n / m
+  end
+  checksum
+end
+
+puts "Day 2"
+puts " - What is the checksum? #{solution_1}"
+puts " - What is the sum of each row's result? #{solution_2}"

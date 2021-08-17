@@ -66,16 +66,14 @@ def jump_through_trampoline_maze(twisty = false)
   steps
 end
 
-
-module TwistyTrampolines
-
-  def TwistyTrampolines.solution_1
-    jump_through_trampoline_maze
-  end
-
-  def TwistyTrampolines.solution_2
-    jump_through_trampoline_maze(twisty = true)
-  end
-
+def solution_1
+  jump_through_trampoline_maze
 end
 
+def solution_2
+  jump_through_trampoline_maze(twisty = true)
+end
+
+puts "Day 5"
+puts " - How many steps does it take? #{solution_1}"
+puts " - How many steps does it now take? #{solution_2}"

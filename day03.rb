@@ -156,26 +156,30 @@ class SpiralMemory
     neighbors
   end
 
-  def SpiralMemory.solution_1
-    input = 277_678
-    memory = SpiralMemory.new
-    memory.allocate_until(input)
-    x, y = memory.coordinates(input)
-    x + y
-  end
-
-  def SpiralMemory.solution_2
-    input = 277_678
-    memory = SpiralMemory.new
-    memory.write_values = true
-    while memory.values.max < input
-      memory.allocate_next_iteration
-    end
-    memory.values.each do |value|
-      if value > input
-        return value
-      end
-    end
-  end
-
 end
+
+def solution_1
+  input = 277_678
+  memory = SpiralMemory.new
+  memory.allocate_until(input)
+  x, y = memory.coordinates(input)
+  x + y
+end
+
+def solution_2
+  input = 277_678
+  memory = SpiralMemory.new
+  memory.write_values = true
+  while memory.values.max < input
+    memory.allocate_next_iteration
+  end
+  memory.values.each do |value|
+    if value > input
+      return value
+    end
+  end
+end
+
+puts "Day 3"
+puts " - How many steps are required? #{solution_1}"
+puts " - What is the first value written larger than the input? #{solution_2}"
