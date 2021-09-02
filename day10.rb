@@ -67,23 +67,9 @@ class CircularList
 
 end
 
-def solution_1
+def knot_hash(input)
   list = CircularList.new(0..255)
-  input = read_input.split(',').map { |s| s.to_i }
-  i = 0
-  skip = 0
-  input.each do |length|
-    list.reverse(i, length)
-    i += length
-    i += skip
-    skip += 1
-  end
-  list[0] * list[1]
-end
-
-def solution_2
-  list = CircularList.new(0..255)
-  input = read_input.bytes + [17, 31, 73, 47, 23]
+  input = input.bytes + [17, 31, 73, 47, 23]
   i = 0
   skip = 0
   64.times do
@@ -101,6 +87,22 @@ def solution_2
   knot_hash
 end
 
-puts 'Day 10'
-puts " - What is the result of multiplying the first two numbers in the list? #{solution_1}"
-puts " - What is the Knot Hash of your puzzle input? #{solution_2}"
+def solution_1
+  list = CircularList.new(0..255)
+  input = read_input.split(',').map { |s| s.to_i }
+  i = 0
+  skip = 0
+  input.each do |length|
+    list.reverse(i, length)
+    i += length
+    i += skip
+    skip += 1
+  end
+  list[0] * list[1]
+end
+
+if __FILE__ == $0
+  puts 'Day 10'
+  puts " - What is the result of multiplying the first two numbers in the list? #{solution_1}"
+  puts " - What is the Knot Hash of your puzzle input? #{knot_hash(read_input)}"
+end
